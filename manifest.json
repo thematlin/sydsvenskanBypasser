@@ -6,10 +6,15 @@
   "version": "1.0",
 
   "permissions": [
-    "http://sydsvenskan.se/"
+    "cookies",
+    "*://*.sydsvenskan.se",
+    "*://sydsvenskan.se"
   ],
   "browser_action": {
-    "default_icon": "icon.png",
-    "default_popup": "popup.html"
+    "default_icon": "",
+    "default_title": "Reset article read"
+  },
+  "background": {
+    "page": "html/bg.html"
   }
 }
