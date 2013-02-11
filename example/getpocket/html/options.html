@@ -1,0 +1,59 @@
+<html>
+	<head>
+		<title>Pocket Chrome Extension Options</title>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css">
+		<link rel="stylesheet" type="text/css" href="../css/options.css">
+		<script src="../js/options-page.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="content">
+			<div id="header">
+				<img src="../img/Pocket-Chrome-OptionsLogo.png">
+			</div>
+			<div id="content-inner-container">
+				<h2>OPTIONS</h2>
+				<div class="section-wrapper">				
+					<h3>Logged in as: </h3>
+					<ul class="section-item-list">
+						<li><span id="username-field"></span> <span id="logout-link-wrapper">(<a id="logout-link" href='#'>logout</a>)</span><span id="login-link-wrapper"><a id="login-link" href="#">Click here to log in</a></span></li>
+					</ul>
+				</div>
+				<div class="section-wrapper" id="ril-options">
+					<h3>General:</h3>
+					<ul class="section-item-list">
+						<li><input id="notifications-checkbox" type="checkbox" class="checkbox" /><label for="notifications-checkbox">Show Notifications</label></li>
+						<li><input id="keyboard-shortcut-checkbox" type="checkbox" class="checkbox" /><label for="keyboard-shortcut-checkbox">Save on Keyboard Shortcut (<span id='platformSpecificKeyboardShortcutKey'></span>)</label></li>
+					</ul>
+				</div>
+				<div class="section-wrapper" id="ril-integrations">
+					<h3>Quick save services:</h3>
+					<ul class="section-item-list">
+						<li><input id="twitter-checkbox" type="checkbox" class="checkbox" /><label for="twitter-checkbox">Twitter</label></li>
+						<li><input id="greader-checkbox" type="checkbox" class="checkbox" /><label for="greader-checkbox">Google Reader</label></li>
+						<li class="services-info">When enabled, you can add directly to Pocket any items from these services <a href="http://help.getpocket.com/customer/portal/articles/485889">(learn more)</a>.</li>
+					</ul>
+					<div class="clear"></div>
+				</div>
+
+		    	<div id="ril-topic_footer" class="block">
+    				<h3>More ways to use Pocket:</h3>
+					<ul id="ril-topics">
+					    <li class="ril-web"><a target="_blank" href="http://getpocket.com/a/">Web App</a></li>
+						<li class="ril-iphone"><a target="_blank" href="http://getpocket.com/iphone/">iPhone</a></li>
+					    <li class="ril-ipad"><a target="_blank" href="http://getpocket.com/iphone/">iPad</a></li>
+					    <li class="ril-android"><a target="_blank" href="http://getpocket.com/android/">Android</a></li>
+					</ul>
+				</div>
+
+				<div class="section-wrapper" id="ril-support">
+					<h3>Questions about Pocket?</h3>
+					<ul class="section-item-list">
+						<li><a href="http://help.getpocket.com/">Search support</a> or <a href="http://help.getpocket.com/customer/portal/emails/new">get in touch</a>.</li>
+					</ul>
+					<div class="clear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="copyright">&copy; Copyright 2012 Read It Later Inc.</div>
+	</body>
+</html>

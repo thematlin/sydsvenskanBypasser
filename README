@@ -1,0 +1,7 @@
+Chrome Extension to clear visited pages on Sydsvenskan.se so that I won't be bothered with "you've read 20 articles, please pay us money to read more". Since it's only saved in a cookie it should be easy with an extension to just clear it.
+
+Some resources: 
+http://developer.chrome.com/extensions/getstarted.html
+http://developer.chrome.com/extensions/overview.html
+
+Also put source for getpocket.com's extension in /example.

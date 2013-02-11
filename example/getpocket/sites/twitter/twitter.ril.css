@@ -1,0 +1,92 @@
+.tweet .actions a {
+	font-size: 12px;
+}
+
+div.stream-item:not(.open) div.tweet.original-tweet div.stream-item-header ul.actions {
+	width: 100%;
+	padding-left: 0;
+	background-image: none;
+	text-align: right;
+}
+
+div.stream-item:not(.open) div.tweet.original-tweet div.stream-item-header ul.actions li {
+	background-color: #fff;
+}
+
+body.ril-plugin-v1 li.ril-fade-action {
+       display: none;
+}
+
+body.ril-plugin-v1 li.ril-fade-action span {
+       display: none;
+}
+
+body.ril-plugin-v1 .original-tweet .stream-item-header li.ril-fade-action span,
+body.ril-plugin-v2 .original-tweet .stream-item-header li.ril-fade-action {
+	background-color: transparent !important;
+	display: inline;
+}
+
+.original-tweet .stream-item-header li.ril-fade-action {
+	background-image: url(twitter_web_sprite_bgs.png) !important;
+	background-position: 0 -240px !important;
+	background-repeat: repeat-x !important;
+	width: 45px !important;
+	display: inline-block !important;
+	position: relative;
+	right: -5px;
+}
+
+a.read-later-action.new {
+	text-decoration: none !important;
+}
+
+.open .original-tweet .stream-item-header a.read-later-action.new,
+.expando-profile-popup a.read-later-action.new {
+	display: none;
+}
+
+body.ril-plugin-v1 a.read-later-action.new span i {
+	margin-right: 0 !important;
+	background-image: url(twttr-sprite.png) !important;
+	background-repeat: no-repeat;
+	background-position: -5px -30px;
+	margin-right: 1px !important;
+	width: 16px;
+	height: 16px;
+}
+
+body.ril-plugin-v2 a.read-later-action.new i{
+	-webkit-mask-image: url(twitter-mask.png);
+	background-image: none;
+	width: 16px;
+	height: 16px;
+	margin-right: 1px;
+}
+
+body.ril-plugin-v2 .slideshow-tweet .a.read-later-action.new i, body.ril-plugin-v2 .route-permalink a.read-later-action.new i{
+	-webkit-mask-image: url(twitter-mask-large.png);
+}
+
+body.ril-plugin-v1 .in-reply-to a.read-later-action.new span i, .replies-to a.read-later-action.new span i {
+	background-position-y: -5px;
+}
+
+body.ril-plugin-v1 .slideshow-tweet a.read-later-action.new span i,
+body.ril-plugin-v2 .slideshow-tweet a.read-later-action.new i {
+	background-position: -5px -55px;
+}
+body.ril-plugin-v1 .slideshow-tweet a.read-later-action.new:hover span i,
+body.ril-plugin-v2 .slideshow-tweet a.read-later-action.new:hover i {
+	background-color: #fff !important;
+}
+
+body.ril-plugin-v1 a.read-later-action.new span b,
+body.ril-plugin-v2 a.read-later-action.new b{
+	margin-left: 2px;
+}
+
+body.ril-plugin-v1 a.read-later-action.new:hover span b,
+body.ril-plugin-v2 a.read-later-action.new:hover b {
+	text-decoration: underline;
+}

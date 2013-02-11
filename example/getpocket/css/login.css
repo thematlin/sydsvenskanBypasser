@@ -1,0 +1,139 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	font-family: ProximaNova, Helvetica, Arial, sans-serif;
+
+	/* This 1 px padding is necessary for the login popup 
+		window otherwise  the border would not look good */
+	padding: 1px;
+	width: 425px;
+	height: 375px;
+}
+
+h1 {
+	font-size: 24px;
+	margin: 20px 0px 15px 0px;
+	text-shadow: 0px 1px 0px #fff;
+}
+
+h2 {
+	font-size: 16px;
+	margin: 10px 0px 20px 0px;
+	text-shadow: 0px 1px 0px #fff;
+}
+
+a {
+	text-decoration: underline;
+}
+
+p {
+	font-size: 18px;
+}
+
+input {
+	display: block;
+	margin: 10px auto;
+	width: 340px;
+	height: 34px;
+	font-size: 16px;
+	color: #494849;
+	padding: 5px 10px;
+	border: 1px solid #bdbdbd;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-border-radius: 5px;
+	outline: none;
+}
+
+/* header */
+
+#header {
+	height: 45px;
+	padding: 5px;
+}
+
+#header img {
+	width: 175px;
+	margin-top: 7px;
+}
+
+#header a {
+	float: right;
+	margin-top: 15px;
+	margin-right: 20px;
+	font-size: 13px;
+	color: #000;
+}
+
+/* content */
+
+#outer-container {
+	padding: 5px;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6spx;
+	background-color: #F0F0F0;
+	border: 1px solid #b4b4b4;
+	height: 370px;
+}
+
+#inner-container {
+	padding: 5px;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	border-radius: 8px;
+}
+
+#content {
+	text-align: center;
+	font-weight: bold;
+}
+
+#login-button-container {
+	margin-top: 4px;
+}
+
+#login-button-link {
+	background-image: url(../img/login_button_sprite.png) !important;
+	background-position: 0px 0px !important;
+	background-repeat: no-repeat;
+	display: inline-block;
+	width: 200px;
+	height: 55px;
+}
+
+#login-button-link:hover {
+	background-position: 0 -77px !important;
+}
+
+#subtext-field {
+	color: #6C6C6C;
+	font-size: 13px;
+	padding-top: 3px;
+	text-shadow: 0px 1px 0px white;
+	padding-left: 60px;
+	padding-right: 60px;
+	font-weight: 500;
+	line-height: 1.2em;
+	min-height: 33px;
+}
+
+#subtext-field.error{
+	color: #EF4056;
+	font-weight: bold;
+}
+
+/* footer */
+
+#footer {
+	text-align: center;
+	padding: 10px 0px 10px 0px; 
+}
+
+#footer a {
+	font-size: 12px;
+	color: #000000;
+}

@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+
+  "name": "Sydsvenskan clear article block",
+  "description": "This extensions clears your visited pages on Sydsvenskan.se so that you can read more than 20 articles.",
+  "version": "1.0",
+
+  "permissions": [
+    "http://sydsvenskan.se/"
+  ],
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  }
+}

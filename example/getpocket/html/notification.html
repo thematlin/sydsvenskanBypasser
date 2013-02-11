@@ -1,0 +1,98 @@
+<html>
+	<head>
+		<title>Notification</title>
+		<link rel="stylesheet" type="text/css" href="../css/notification.css">
+
+		<script type="text/javascript">
+
+			var viewQueueLinkURL = 'http://getpocket.com/a/queue/';
+			var viewMobileLinkURL = 'http://getpocket.com/apps/mobile';
+
+			var openLinkInNewTab = function(url) {
+				chrome.tabs.create({'url': url}, function(tab) {
+					clearTimeout(document.timeout);
+					self.close();
+	  			});
+			};
+
+			// function to get selected text from notification's querystring and parse for it's components
+			// for further information on notification controlling look at: 
+			// http://www.fienipa.com/blog/controlling-desktop-notifications-chrome-extensions
+			var getURLComponents = function(){
+				var locationString = window.location.search;
+				var compontents = {};
+				var urlComponentsString = locationString.split('?')[1];
+				var urlComponents = urlComponentsString.split('&');
+				for (var i = 0; i < urlComponents.length; i++) {
+					var urlComponent = urlComponents[i];
+					var key = urlComponent.split('=')[0];
+					var value = urlComponent.split('=')[1];
+					compontents[key] = decodeURIComponent(value);
+				};
+				return compontents;
+			}
+
+			var notificationMouseOver = function() {
+				clearTimeout(document.timeout);
+			};
+
+			var notificationMouseOut = function() {
+				document.timeout = setTimeout(self.close, 2500);
+			};
+
+			var init = function() {
+
+				document.body.onmouseover = notificationMouseOver;
+				document.body.onmouseout = notificationMouseOut;
+
+				var urlComponents = getURLComponents();
+
+				document.getElementById('title-text').innerHTML = urlComponents['title'];
+
+				// Set left and right link dependent on the notification status givin in the URL components
+				var viewLeftLink = document.getElementById("view-left-link");
+				var linksDivider = document.getElementById("links-divider");
+				var viewRightLink = document.getElementById("view-right-link");
+				var status = urlComponents['status'];
+				if (status === "normal") {
+					viewLeftLink.innerHTML = "Go to Pocket";
+					viewLeftLink.onclick = function () {
+						openLinkInNewTab(viewQueueLinkURL);
+					};
+
+//					viewRightLink.innerHTML = "View on mobile";
+//					viewRightLink.onclick = function () {
+//						openLinkInNewTab(viewMobileLinkURL);
+//					};
+				} else if (status === "serviceURL") {
+					viewLeftLink.innerHTML = "Learn how";
+					viewRightLink.onclick = function () {
+						openLinkInNewTab(viewMobileLinkURL);
+					};
+
+					linksDivider.innerHTML = "-";
+
+					viewRightLink.innerHTML = "Go to Pocket";
+					viewRightLink.onclick = function () {
+						openLinkInNewTab(viewQueueLinkURL);
+					};
+				} else if (status === "error"){
+					document.getElementById("icon").setAttribute("src", "../img/notification-error.png");
+				}
+
+				document.timeout = setTimeout(self.close, 2500);
+			};
+
+			window.onload = init;
+
+		</script>
+	</head>
+	<!--<body onmouseover="notificationMouseOver();" onmouseout="notificationMouseOut();">-->
+	<body>
+		<img id="icon" src='../img/icon-48.png' />
+		<div id="title">     
+		    <p id="title-text"></p>    
+		</div>
+		<div id="links" ><a id="view-left-link" href="#"></a><span id='links-divider'></span><a id="view-right-link" href="#"></a></div>
+	</body>
+</html>
