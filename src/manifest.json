@@ -1,20 +1,30 @@
 {
   "manifest_version": 2,
 
-  "name": "Sydsvenskan clear article block",
-  "description": "This extensions clears your visited pages on Sydsvenskan.se so that you can read more than 20 articles.",
+  "name": "Sydsvenskan Bypasser",
+  "description": "This extensions resets your visited pages on Sydsvenskan.se so that you can read more than 20 articles.",
   "version": "1.0",
 
   "permissions": [
     "cookies",
-    "*://*.sydsvenskan.se",
-    "*://sydsvenskan.se"
+    "tabs",
+    "http://sydsvenskan.se/",
+    "https://sydsvenskan.se/*",
+    "http://www.sydsvenskan.se/"
   ],
-  "browser_action": {
-    "default_icon": "",
-    "default_title": "Reset article read"
+  "page_action": {
+    "default_icon":  { 
+      "19": "img/19-logo.png",
+      "38": "img/38-logo.png"
+    },
+    "default_popup": "html/popup.html",
+    "default_title": "Reset articles read"
   },
   "background": {
-    "page": "html/bg.html"
+    "scripts": ["js/background.js"]
+  },
+  "icons": {
+    "48": "img/48-logo.png",
+    "128": "img/128-logo.png"
   }
 }
