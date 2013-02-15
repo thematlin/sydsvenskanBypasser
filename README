@@ -7,3 +7,5 @@ http://developer.chrome.com/extensions/overview.html
 Also put source for getpocket.com's extension in /example.
 
 Next step might be to create a "Context Script" to eliminate the need for pushing the page action to reset the articles count.
+
+This comes with a MIT license
